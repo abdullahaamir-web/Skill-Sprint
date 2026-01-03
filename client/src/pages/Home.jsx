@@ -51,7 +51,7 @@ const Home = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="container" style={{ marginTop: '-3rem', position: 'relative', zIndex: 10 }}>
+            <section className="container mt-negative-mobile" style={{ marginTop: '-3rem', position: 'relative', zIndex: 10 }}>
                 <div className="grid grid-3">
                     <div className="card stat-card">
                         <Users size={40} style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-md)' }} />

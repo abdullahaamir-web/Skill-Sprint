@@ -73,7 +73,7 @@ const Dashboard = () => {
             </div>
 
             {/* Stats Overview */}
-            <div className="grid grid-4 mb-xl">
+            <div className="grid grid-4 card-grid-mobile mb-xl">
                 <div className="card stat-card">
                     <Target size={32} style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-md)' }} />
                     <div className="stat-value">{totalChallengesCompleted}</div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="grid grid-2 mb-xl">
+            <div className="grid grid-2 card-grid-mobile mb-xl">
                 {/* Active Skills */}
                 <div className="card">
                     <h3 className="mb-lg">Active Skills</h3>

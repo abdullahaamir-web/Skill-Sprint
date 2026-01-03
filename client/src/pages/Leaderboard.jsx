@@ -108,12 +108,12 @@ const Leaderboard = () => {
                                         border: isCurrentUser ? '2px solid var(--primary)' : '1px solid var(--border)'
                                     }}
                                 >
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex items-center gap-lg">
+                                    <div className="flex items-center justify-between gap-md" style={{ flexWrap: 'wrap' }}>
+                                        <div className="flex items-center gap-md" style={{ flexWrap: 'wrap' }}>
                                             <div style={{
-                                                fontSize: '1.5rem',
+                                                fontSize: '1.25rem',
                                                 fontWeight: 'bold',
-                                                minWidth: '40px',
+                                                minWidth: '30px',
                                                 textAlign: 'center'
                                             }}>
                                                 {medal || `#${rank}`}
@@ -121,32 +121,36 @@ const Leaderboard = () => {
                                             <img
                                                 src={entry.avatar}
                                                 alt={entry.name}
-                                                className="avatar-lg"
-                                                style={{ border: isCurrentUser ? '3px solid white' : '2px solid var(--border)' }}
+                                                className="avatar"
+                                                style={{
+                                                    width: '48px',
+                                                    height: '48px',
+                                                    border: isCurrentUser ? '2px solid white' : '1px solid var(--border)'
+                                                }}
                                             />
-                                            <div>
-                                                <h4 style={{ color: isCurrentUser ? 'white' : 'var(--text-primary)' }}>
+                                            <div style={{ flex: 1, minWidth: '150px' }}>
+                                                <h4 style={{ color: isCurrentUser ? 'white' : 'var(--text-primary)', marginBottom: 'var(--spacing-xs)' }}>
                                                     {entry.name}
                                                     {isCurrentUser && ' (You)'}
                                                 </h4>
-                                                <div className="flex gap-md mt-sm">
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.875rem' }}>
-                                                        <Trophy size={14} style={{ display: 'inline', marginRight: '4px' }} />
-                                                        {entry.points} points
+                                                <div className="flex gap-md mt-xs" style={{ flexWrap: 'wrap', rowGap: 'var(--spacing-xs)' }}>
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
+                                                        <Trophy size={12} style={{ marginRight: '4px' }} />
+                                                        {entry.points} pts
                                                     </span>
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.875rem' }}>
-                                                        <Flame size={14} style={{ display: 'inline', marginRight: '4px' }} />
-                                                        {entry.streak} day streak
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
+                                                        <Flame size={12} style={{ marginRight: '4px' }} />
+                                                        {entry.streak}d
                                                     </span>
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.875rem' }}>
-                                                        <Target size={14} style={{ display: 'inline', marginRight: '4px' }} />
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
+                                                        <Target size={12} style={{ marginRight: '4px' }} />
                                                         {entry.challengesCompleted} challenges
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                         {rank <= 3 && (
-                                            <Medal size={32} style={{ color: isCurrentUser ? 'white' : 'var(--warning)' }} />
+                                            <Medal size={24} style={{ color: isCurrentUser ? 'white' : 'var(--warning)', flexShrink: 0 }} />
                                         )}
                                     </div>
                                 </div>
