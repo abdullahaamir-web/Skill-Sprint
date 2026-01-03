@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "Web Design",
+    "description": "Master the fundamentals of modern web design, including layout, typography, color theory, and responsive design principles.",
+    "difficulty": "Beginner",
+    "estimatedTime": "4 weeks",
+    "icon": "🎨",
+    "totalChallenges": 5,
+    "enrolledCount": 234,
+    "category": "Design"
+  },
+  {
+    "id": "2",
+    "title": "WordPress Development",
+    "description": "Learn to build professional websites using WordPress, from basic setup to custom theme development.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "6 weeks",
+    "icon": "📝",
+    "totalChallenges": 6,
+    "enrolledCount": 190,
+    "category": "Development"
+  },
+  {
+    "id": "3",
+    "title": "Graphic Design",
+    "description": "Create stunning visual content using industry-standard design principles and tools.",
+    "difficulty": "Beginner",
+    "estimatedTime": "5 weeks",
+    "icon": "🖼️",
+    "totalChallenges": 5,
+    "enrolledCount": 312,
+    "category": "Design"
+  },
+  {
+    "id": "4",
+    "title": "Video Editing",
+    "description": "Learn professional video editing techniques, transitions, effects, and storytelling through video.",
+    "difficulty": "Intermediate",
+    "estimatedTime": "7 weeks",
+    "icon": "🎬",
+    "totalChallenges": 6,
+    "enrolledCount": 156,
+    "category": "Media"
+  },
+  {
+    "id": "5",
+    "title": "JavaScript Programming",
+    "description": "Master JavaScript from basics to advanced concepts including ES6+, async programming, and modern frameworks.",
+    "difficulty": "Advanced",
+    "estimatedTime": "8 weeks",
+    "icon": "💻",
+    "totalChallenges": 8,
+    "enrolledCount": 421,
+    "category": "Development"
+  }
+]

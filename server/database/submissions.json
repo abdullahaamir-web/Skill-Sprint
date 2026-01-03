@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "userId": "3",
+    "challengeId": "6",
+    "skillId": "2",
+    "submissionType": "text",
+    "content": "I learned How to download the Wordpress through xampp",
+    "status": "approved",
+    "submittedAt": "2026-01-03T20:40:40.970Z",
+    "feedback": "Great work!",
+    "reviewedAt": "2026-01-03T20:50:02.068Z"
+  },
+  {
+    "id": "2",
+    "userId": "3",
+    "challengeId": "7",
+    "skillId": "2",
+    "submissionType": "text",
+    "content": "created it",
+    "status": "rejected",
+    "submittedAt": "2026-01-03T20:52:46.202Z",
+    "feedback": "Give Me Proof Of What You Did How Can I believe You did That",
+    "reviewedAt": "2026-01-03T20:54:05.896Z"
+  }
+]

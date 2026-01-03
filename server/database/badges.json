@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "First Steps",
+    "description": "Complete your first challenge",
+    "icon": "🎯",
+    "requirement": "complete_1_challenge"
+  },
+  {
+    "id": "2",
+    "name": "Quick Learner",
+    "description": "Complete 5 challenges",
+    "icon": "⚡",
+    "requirement": "complete_5_challenges"
+  },
+  {
+    "id": "3",
+    "name": "Dedicated",
+    "description": "Maintain a 7-day streak",
+    "icon": "🔥",
+    "requirement": "7_day_streak"
+  },
+  {
+    "id": "4",
+    "name": "Skill Master",
+    "description": "Complete an entire skill",
+    "icon": "🏆",
+    "requirement": "complete_skill"
+  },
+  {
+    "id": "5",
+    "name": "Overachiever",
+    "description": "Complete 3 skills",
+    "icon": "⭐",
+    "requirement": "complete_3_skills"
+  },
+  {
+    "id": "6",
+    "name": "Top Performer",
+    "description": "Reach top 10 on leaderboard",
+    "icon": "👑",
+    "requirement": "top_10_leaderboard"
+  }
+]

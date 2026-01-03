@@ -1,0 +1,284 @@
+[
+  {
+    "id": "1",
+    "skillId": "1",
+    "order": 1,
+    "title": "Understanding Design Principles",
+    "description": "Learn about balance, contrast, hierarchy, and white space in web design.",
+    "instructions": "Read the provided resources and create a mood board with examples of good design principles.",
+    "resources": [
+      "https://www.interaction-design.org/literature/article/the-building-blocks-of-visual-design"
+    ]
+  },
+  {
+    "id": "2",
+    "skillId": "1",
+    "order": 2,
+    "title": "Color Theory Basics",
+    "description": "Master color combinations and psychology in web design.",
+    "instructions": "Create 3 color palettes for different website types (corporate, creative, e-commerce).",
+    "resources": [
+      "https://color.adobe.com"
+    ]
+  },
+  {
+    "id": "3",
+    "skillId": "1",
+    "order": 3,
+    "title": "Typography Fundamentals",
+    "description": "Learn to choose and pair fonts effectively.",
+    "instructions": "Design a typography system with heading and body font combinations.",
+    "resources": [
+      "https://fonts.google.com"
+    ]
+  },
+  {
+    "id": "4",
+    "skillId": "1",
+    "order": 4,
+    "title": "Responsive Layout Design",
+    "description": "Create layouts that work on all devices.",
+    "instructions": "Design a responsive homepage layout for mobile, tablet, and desktop.",
+    "resources": []
+  },
+  {
+    "id": "5",
+    "skillId": "1",
+    "order": 5,
+    "title": "Complete Website Mockup",
+    "description": "Design a full website mockup applying all learned principles.",
+    "instructions": "Create a complete 3-page website design in Figma or Adobe XD.",
+    "resources": []
+  },
+  {
+    "id": "6",
+    "skillId": "2",
+    "order": 1,
+    "title": "Install WordPress Locally",
+    "description": "Set up a local WordPress development environment.",
+    "instructions": "Install WordPress using XAMPP or Local by Flywheel and access the admin dashboard.",
+    "resources": [
+      "https://wordpress.org/download/"
+    ]
+  },
+  {
+    "id": "7",
+    "skillId": "2",
+    "order": 2,
+    "title": "Create Your First Page",
+    "description": "Build a homepage using the WordPress editor.",
+    "instructions": "Create a homepage with header, hero section, and footer using Gutenberg blocks.",
+    "resources": []
+  },
+  {
+    "id": "8",
+    "skillId": "2",
+    "order": 3,
+    "title": "Install and Configure Elementor",
+    "description": "Learn to use the Elementor page builder.",
+    "instructions": "Install Elementor plugin and recreate your homepage using Elementor widgets.",
+    "resources": [
+      "https://elementor.com/"
+    ]
+  },
+  {
+    "id": "9",
+    "skillId": "2",
+    "order": 4,
+    "title": "Build a Landing Page",
+    "description": "Create a conversion-focused landing page.",
+    "instructions": "Design and build a product landing page with CTA buttons and contact form.",
+    "resources": []
+  },
+  {
+    "id": "10",
+    "skillId": "2",
+    "order": 5,
+    "title": "Customize Theme Settings",
+    "description": "Learn theme customization and branding.",
+    "instructions": "Customize colors, fonts, and layout settings in your WordPress theme.",
+    "resources": []
+  },
+  {
+    "id": "11",
+    "skillId": "2",
+    "order": 6,
+    "title": "Create a Blog Section",
+    "description": "Set up and style a blog with posts and categories.",
+    "instructions": "Create 5 blog posts with featured images, categories, and tags.",
+    "resources": []
+  },
+  {
+    "id": "12",
+    "skillId": "3",
+    "order": 1,
+    "title": "Logo Design Basics",
+    "description": "Learn the principles of effective logo design.",
+    "instructions": "Create 3 logo concepts for a fictional company.",
+    "resources": []
+  },
+  {
+    "id": "13",
+    "skillId": "3",
+    "order": 2,
+    "title": "Social Media Graphics",
+    "description": "Design engaging social media posts.",
+    "instructions": "Create a set of 5 Instagram posts with consistent branding.",
+    "resources": []
+  },
+  {
+    "id": "14",
+    "skillId": "3",
+    "order": 3,
+    "title": "Poster Design",
+    "description": "Create an eye-catching event poster.",
+    "instructions": "Design a poster for a music festival or conference.",
+    "resources": []
+  },
+  {
+    "id": "15",
+    "skillId": "3",
+    "order": 4,
+    "title": "Brand Identity Package",
+    "description": "Develop a complete brand identity system.",
+    "instructions": "Create a brand guide with logo, colors, typography, and usage examples.",
+    "resources": []
+  },
+  {
+    "id": "16",
+    "skillId": "3",
+    "order": 5,
+    "title": "Marketing Materials",
+    "description": "Design professional marketing collateral.",
+    "instructions": "Create a business card, flyer, and email signature.",
+    "resources": []
+  },
+  {
+    "id": "17",
+    "skillId": "4",
+    "order": 1,
+    "title": "Basic Cuts and Transitions",
+    "description": "Learn fundamental editing techniques.",
+    "instructions": "Edit a 1-minute video using basic cuts and 3 different transitions.",
+    "resources": []
+  },
+  {
+    "id": "18",
+    "skillId": "4",
+    "order": 2,
+    "title": "Color Grading Basics",
+    "description": "Enhance your videos with color correction.",
+    "instructions": "Apply color grading to create 3 different moods (warm, cool, cinematic).",
+    "resources": []
+  },
+  {
+    "id": "19",
+    "skillId": "4",
+    "order": 3,
+    "title": "Audio Mixing",
+    "description": "Balance dialogue, music, and sound effects.",
+    "instructions": "Edit a video with background music, voiceover, and sound effects properly mixed.",
+    "resources": []
+  },
+  {
+    "id": "20",
+    "skillId": "4",
+    "order": 4,
+    "title": "Motion Graphics",
+    "description": "Add animated text and graphics to videos.",
+    "instructions": "Create a 30-second intro with animated text and logo.",
+    "resources": []
+  },
+  {
+    "id": "21",
+    "skillId": "4",
+    "order": 5,
+    "title": "Short Film Project",
+    "description": "Create a complete short video project.",
+    "instructions": "Edit a 2-3 minute short film or promotional video with all learned techniques.",
+    "resources": []
+  },
+  {
+    "id": "22",
+    "skillId": "4",
+    "order": 6,
+    "title": "YouTube Video Production",
+    "description": "Learn YouTube-specific editing techniques.",
+    "instructions": "Create a YouTube video with intro, outro, lower thirds, and end screen.",
+    "resources": []
+  },
+  {
+    "id": "23",
+    "skillId": "5",
+    "order": 1,
+    "title": "JavaScript Fundamentals",
+    "description": "Master variables, data types, and operators.",
+    "instructions": "Complete 10 coding exercises covering JS basics.",
+    "resources": [
+      "https://javascript.info/"
+    ]
+  },
+  {
+    "id": "24",
+    "skillId": "5",
+    "order": 2,
+    "title": "Functions and Scope",
+    "description": "Understand functions, closures, and scope.",
+    "instructions": "Build a calculator using functions and proper scope management.",
+    "resources": []
+  },
+  {
+    "id": "25",
+    "skillId": "5",
+    "order": 3,
+    "title": "DOM Manipulation",
+    "description": "Learn to interact with HTML elements using JavaScript.",
+    "instructions": "Create an interactive to-do list with add, delete, and mark complete features.",
+    "resources": []
+  },
+  {
+    "id": "26",
+    "skillId": "5",
+    "order": 4,
+    "title": "ES6+ Features",
+    "description": "Master modern JavaScript syntax and features.",
+    "instructions": "Refactor old code using arrow functions, destructuring, and template literals.",
+    "resources": []
+  },
+  {
+    "id": "27",
+    "skillId": "5",
+    "order": 5,
+    "title": "Async JavaScript",
+    "description": "Work with promises, async/await, and APIs.",
+    "instructions": "Build a weather app that fetches data from an API.",
+    "resources": []
+  },
+  {
+    "id": "28",
+    "skillId": "5",
+    "order": 6,
+    "title": "Object-Oriented Programming",
+    "description": "Learn classes, inheritance, and OOP principles.",
+    "instructions": "Create a game using OOP concepts (e.g., a simple RPG character system).",
+    "resources": []
+  },
+  {
+    "id": "29",
+    "skillId": "5",
+    "order": 7,
+    "title": "Error Handling",
+    "description": "Implement proper error handling and debugging.",
+    "instructions": "Add comprehensive error handling to your previous projects.",
+    "resources": []
+  },
+  {
+    "id": "30",
+    "skillId": "5",
+    "order": 8,
+    "title": "Final Project",
+    "description": "Build a complete JavaScript application.",
+    "instructions": "Create a full-featured web application combining all learned concepts.",
+    "resources": []
+  }
+]

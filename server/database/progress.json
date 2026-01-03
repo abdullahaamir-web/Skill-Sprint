@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "userId": "3",
+    "skillId": "2",
+    "enrolledAt": "2026-01-03T20:36:04.410Z",
+    "completedChallenges": [
+      "6"
+    ],
+    "currentChallenge": 2
+  }
+]

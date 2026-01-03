@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "email": "admin@skillsprint.com",
+    "password": "$2a$10$JkofWOzwl61aMuYFolm2HO6NzWe24ASfDn7S7L8Ea9PQgdWY4NCy2",
+    "name": "Admin User",
+    "role": "admin",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Admin",
+    "bio": "Platform Administrator",
+    "createdAt": "2026-01-03T20:21:10.351Z",
+    "streak": 0,
+    "points": 0
+  },
+  {
+    "id": "2",
+    "email": "user@skillsprint.com",
+    "password": "$2a$10$ZqzrPTHLskPn8o.QV/5H1e8a2vuHOm5zuUmwJC7961gMOoY2uPXQW",
+    "name": "Demo Student",
+    "role": "student",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Demo",
+    "bio": "Passionate learner",
+    "createdAt": "2026-01-03T20:21:10.375Z",
+    "streak": 5,
+    "points": 450
+  },
+  {
+    "id": "3",
+    "email": "learnude@gmail.com",
+    "password": "$2a$10$OgutqWmQbHUOIXTJT3XsSunEXvVgkaDcTEew/.x8Fh3jUH4CIdTX2",
+    "name": "Abdullah",
+    "role": "student",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Abdullah",
+    "bio": "",
+    "createdAt": "2026-01-03T20:35:27.353Z",
+    "streak": 0,
+    "points": 50
+  }
+]
