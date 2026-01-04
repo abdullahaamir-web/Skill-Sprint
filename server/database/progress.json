@@ -32,5 +32,13 @@
     "enrolledAt": "2026-01-04T12:28:45.761Z",
     "completedChallenges": [],
     "currentChallenge": 1
+  },
+  {
+    "id": "5",
+    "userId": "6",
+    "skillId": "4",
+    "enrolledAt": "2026-01-04T12:53:21.458Z",
+    "completedChallenges": [],
+    "currentChallenge": 1
   }
 ]

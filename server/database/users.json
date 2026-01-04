@@ -58,5 +58,17 @@
     "createdAt": "2026-01-04T12:22:00.267Z",
     "streak": 0,
     "points": 0
+  },
+  {
+    "id": "6",
+    "email": "abdullahaamir123456789y@gmail.com",
+    "password": "$2a$10$IMpmK8H92421f5jk1q2AeeDATVupihUvBsleSX8f3wD4xICh0BjQC",
+    "name": "Noor Ul Hassan",
+    "role": "student",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Noor Ul Hassan",
+    "bio": "",
+    "createdAt": "2026-01-04T12:52:56.590Z",
+    "streak": 0,
+    "points": 0
   }
 ]
