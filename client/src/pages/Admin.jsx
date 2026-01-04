@@ -24,8 +24,8 @@ const Admin = () => {
     const fetchAdminData = async () => {
         try {
             const [submissionsRes, skillsRes] = await Promise.all([
-                axios.get('http://localhost:5000/api/admin/submissions'),
-                axios.get('http://localhost:5000/api/skills')
+                axios.get('/api/admin/submissions'),
+                axios.get('/api/skills')
             ]);
 
             setSubmissions(submissionsRes.data);
@@ -39,7 +39,7 @@ const Admin = () => {
 
     const handleReviewSubmission = async (submissionId, status, feedback = '') => {
         try {
-            await axios.patch(`http://localhost:5000/api/submissions/${submissionId}/review`, {
+            await axios.patch(`/api/submissions/${submissionId}/review`, {
                 status,
                 feedback
             });
@@ -53,7 +53,7 @@ const Admin = () => {
     const handleCreateSkill = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/skills', {
+            await axios.post('/api/skills', {
                 ...newSkill,
                 totalChallenges: 0
             });

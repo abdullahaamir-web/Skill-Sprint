@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
     const fetchCurrentUser = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/me');
+            const response = await axios.get('/api/auth/me');
             setUser(response.data);
         } catch (error) {
             console.error('Failed to fetch user:', error);
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const login = async (email, password) => {
-        const response = await axios.post('http://localhost:5000/api/auth/login', {
+        const response = await axios.post('/api/auth/login', {
             email,
             password
         });
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const register = async (email, password, name, role = 'student') => {
-        const response = await axios.post('http://localhost:5000/api/auth/register', {
+        const response = await axios.post('/api/auth/register', {
             email,
             password,
             name,
@@ -74,7 +74,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const updateProfile = async (data) => {
-        const response = await axios.patch('http://localhost:5000/api/profile', data);
+        const response = await axios.patch('/api/profile', data);
         setUser(response.data);
         return response.data;
     };

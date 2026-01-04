@@ -19,9 +19,9 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
         try {
             const [progressRes, badgesRes, submissionsRes] = await Promise.all([
-                axios.get('http://localhost:5000/api/progress'),
-                axios.get('http://localhost:5000/api/badges'),
-                axios.get('http://localhost:5000/api/submissions')
+                axios.get('/api/progress'),
+                axios.get('/api/badges'),
+                axios.get('/api/submissions')
             ]);
 
             setProgress(progressRes.data);

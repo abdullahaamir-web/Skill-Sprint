@@ -80,7 +80,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   width: 100%;
   scroll-behavior: smooth;
 }
@@ -92,6 +92,35 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   transition: background var(--transition-base), color var(--transition-base);
+  overflow-wrap: break-word;
+  /* Prevent long text overflow */
+}
+
+/* Global Overflow Fixes */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Typography */
@@ -359,13 +388,12 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 1024px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (max-width: 768px) {
 
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -390,7 +418,21 @@ a:hover {
   }
 
   .container {
-    padding: 0 var(--spacing-lg);
+    padding: 0 2rem;
+    /* Significantly tighter mobile spacing */
+  }
+
+  /* Center alignment for mobile cards */
+  .card,
+  .challenge-card {
+    text-align: center;
+  }
+
+  /* Center list items on mobile if they are inside a card */
+  .card ul {
+    text-align: left;
+    /* Keep lists readable */
+    display: inline-block;
   }
 }
 

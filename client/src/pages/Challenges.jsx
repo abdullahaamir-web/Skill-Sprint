@@ -21,14 +21,14 @@ const Challenges = () => {
 
     const fetchChallengeData = async () => {
         try {
-            const skillRes = await axios.get(`http://localhost:5000/api/skills/${skillId}`);
+            const skillRes = await axios.get(`/api/skills/${skillId}`);
             setSkill(skillRes.data);
 
             const challengeData = skillRes.data.challenges?.find(c => c.order === parseInt(challengeOrder));
             setChallenge(challengeData);
 
             // Check if already submitted
-            const submissionsRes = await axios.get('http://localhost:5000/api/submissions');
+            const submissionsRes = await axios.get('/api/submissions');
             const existingSubmission = submissionsRes.data.find(
                 s => s.challengeId === challengeData?.id && s.skillId === skillId
             );
@@ -46,7 +46,7 @@ const Challenges = () => {
         setSuccess(false);
 
         try {
-            await axios.post('http://localhost:5000/api/submissions', {
+            await axios.post('/api/submissions', {
                 challengeId: challenge.id,
                 skillId,
                 submissionType,
@@ -92,7 +92,7 @@ const Challenges = () => {
     return (
         <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
             {/* Breadcrumb */}
-            <div className="mb-lg">
+            <div className="mb-lg responsive-align">
                 <button onClick={() => navigate(`/skills/${skillId}`)} className="btn btn-secondary btn-sm">
                     ← Back to {skill?.title}
                 </button>
@@ -102,8 +102,10 @@ const Challenges = () => {
                 {/* Challenge Content */}
                 <div>
                     <div className="card">
-                        <div className="badge badge-primary mb-md">Challenge {challenge.order}</div>
-                        <h1>{challenge.title}</h1>
+                        <div className="flex items-center gap-md mb-md" style={{ justifyContent: 'inherit' }}>
+                            <div className="badge badge-primary">Challenge {challenge.order}</div>
+                        </div>
+                        <h1 className="mb-md">{challenge.title}</h1>
                         <p className="text-lg">{challenge.description}</p>
 
                         <div className="mt-xl">
@@ -136,8 +138,8 @@ const Challenges = () => {
                         {submission ? (
                             <div>
                                 <div className={`alert ${submission.status === 'approved' ? 'alert-success' :
-                                        submission.status === 'rejected' ? 'alert-error' :
-                                            'alert-warning'
+                                    submission.status === 'rejected' ? 'alert-error' :
+                                        'alert-warning'
                                     }`}>
                                     <div className="flex items-center gap-md">
                                         {submission.status === 'approved' && <CheckCircle size={20} />}

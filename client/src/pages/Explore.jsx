@@ -20,7 +20,7 @@ const Explore = () => {
 
     const fetchSkills = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/skills');
+            const response = await axios.get('/api/skills');
             setSkills(response.data);
             setFilteredSkills(response.data);
         } catch (error) {

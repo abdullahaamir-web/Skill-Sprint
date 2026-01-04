@@ -20,13 +20,13 @@ const SkillDetail = () => {
 
     const fetchSkillData = async () => {
         try {
-            const skillRes = await axios.get(`http://localhost:5000/api/skills/${id}`);
+            const skillRes = await axios.get(`/api/skills/${id}`);
             setSkill(skillRes.data);
             setChallenges(skillRes.data.challenges || []);
 
             if (isAuthenticated) {
                 try {
-                    const progressRes = await axios.get('http://localhost:5000/api/progress');
+                    const progressRes = await axios.get('/api/progress');
                     const skillProgress = progressRes.data.find(p => p.skillId === id);
                     setProgress(skillProgress);
                 } catch (error) {
@@ -48,7 +48,7 @@ const SkillDetail = () => {
 
         setEnrolling(true);
         try {
-            await axios.post('http://localhost:5000/api/progress/enroll', { skillId: id });
+            await axios.post('/api/progress/enroll', { skillId: id });
             fetchSkillData();
         } catch (error) {
             console.error('Failed to enroll:', error);
@@ -87,13 +87,13 @@ const SkillDetail = () => {
             {/* Skill Header */}
             <div className="card mb-xl">
                 <div className="grid grid-2" style={{ alignItems: 'center' }}>
-                    <div>
-                        <div className="skill-icon" style={{ fontSize: '4rem', marginBottom: 'var(--spacing-md)' }}>
+                    <div className="responsive-align">
+                        <div className="skill-icon">
                             {skill.icon}
                         </div>
                         <h1>{skill.title}</h1>
                         <p className="text-lg">{skill.description}</p>
-                        <div className="flex gap-md mt-md">
+                        <div className="flex gap-md mt-md" style={{ justifyContent: 'inherit' }}>
                             <span className={`badge badge-${skill.difficulty === 'Beginner' ? 'success' : skill.difficulty === 'Intermediate' ? 'warning' : 'error'}`}>
                                 {skill.difficulty}
                             </span>

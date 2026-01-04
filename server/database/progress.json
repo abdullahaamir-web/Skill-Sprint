@@ -8,5 +8,29 @@
       "6"
     ],
     "currentChallenge": 2
+  },
+  {
+    "id": "2",
+    "userId": "1",
+    "skillId": "5",
+    "enrolledAt": "2026-01-04T11:55:48.763Z",
+    "completedChallenges": [],
+    "currentChallenge": 1
+  },
+  {
+    "id": "3",
+    "userId": "5",
+    "skillId": "1",
+    "enrolledAt": "2026-01-04T12:22:26.983Z",
+    "completedChallenges": [],
+    "currentChallenge": 1
+  },
+  {
+    "id": "4",
+    "userId": "1",
+    "skillId": "1",
+    "enrolledAt": "2026-01-04T12:28:45.761Z",
+    "completedChallenges": [],
+    "currentChallenge": 1
   }
 ]

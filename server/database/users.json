@@ -34,5 +34,29 @@
     "createdAt": "2026-01-03T20:35:27.353Z",
     "streak": 0,
     "points": 50
+  },
+  {
+    "id": "4",
+    "email": "usernotavailableunknownuser@gmail.com",
+    "password": "$2a$10$EbGiclbEGfbvDK2n9O1QhueSEnpZQbqJbpgRogE6A0zzNkUfkJ2Aa",
+    "name": "AB WEB",
+    "role": "student",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=AB WEB",
+    "bio": "",
+    "createdAt": "2026-01-04T12:20:43.442Z",
+    "streak": 0,
+    "points": 0
+  },
+  {
+    "id": "5",
+    "email": "abdullahudemyacc@gmail.com",
+    "password": "$2a$10$TPCu9lpixSjahUsypFjK9O1/7UHpiXbpBPpPWivK7ZFkSweXJ3rum",
+    "name": "Pat",
+    "role": "student",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pat",
+    "bio": "",
+    "createdAt": "2026-01-04T12:22:00.267Z",
+    "streak": 0,
+    "points": 0
   }
 ]

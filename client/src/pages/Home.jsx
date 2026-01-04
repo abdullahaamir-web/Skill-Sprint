@@ -17,9 +17,9 @@ const Home = () => {
     const fetchData = async () => {
         try {
             const [statsRes, skillsRes, leaderboardRes] = await Promise.all([
-                axios.get('http://localhost:5000/api/stats'),
-                axios.get('http://localhost:5000/api/skills'),
-                axios.get('http://localhost:5000/api/leaderboard')
+                axios.get('/api/stats'),
+                axios.get('/api/skills'),
+                axios.get('/api/leaderboard')
             ]);
 
             setStats(statsRes.data);
