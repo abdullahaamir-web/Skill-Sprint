@@ -1,11 +1,11 @@
 [
   {
     "id": "1",
-    "email": "admin@skillsprint.com",
-    "password": "$2a$10$JkofWOzwl61aMuYFolm2HO6NzWe24ASfDn7S7L8Ea9PQgdWY4NCy2",
-    "name": "Admin User",
+    "email": "noorshah@example.com",
+    "password": "$2a$10$znJyGTBAu1IP/O4wIgnzT.4i5U5ZosWF8YKyHjuSK/vN2LMGnSYIG",
+    "name": "Syed Noor Ul Hassan",
     "role": "admin",
-    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Admin",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Noorshah",
     "bio": "Platform Administrator",
     "createdAt": "2026-01-03T20:21:10.351Z",
     "streak": 0,

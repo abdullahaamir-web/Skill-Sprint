@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
@@ -8,7 +8,7 @@ const Navbar = () => {
     const { user, logout, isAuthenticated, isAdmin } = useAuth();
     const { theme, toggleTheme } = useTheme();
     const navigate = useNavigate();
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
         logout();
@@ -19,15 +19,24 @@ const Navbar = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
-    React.useEffect(() => {
+    // Close menu on resize to desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 900) {
+                setIsMenuOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Prevent scroll when menu is open
+    useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
         }
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
     }, [isMenuOpen]);
 
     return (
@@ -37,20 +46,26 @@ const Navbar = () => {
                     ⚡ SkillSprint
                 </Link>
 
-                <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="flex items-center gap-md">
+                    <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+                        {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                    </button>
+
+                    <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
 
                 <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
                     <li>
                         <Link to="/explore" className="navbar-link" onClick={closeMenu}>
-                            <BookOpen size={18} style={{ display: 'inline', marginRight: '4px' }} />
+                            <BookOpen size={18} style={{ marginRight: '8px' }} />
                             Explore
                         </Link>
                     </li>
                     <li>
                         <Link to="/leaderboard" className="navbar-link" onClick={closeMenu}>
-                            <Trophy size={18} style={{ display: 'inline', marginRight: '4px' }} />
+                            <Trophy size={18} style={{ marginRight: '8px' }} />
                             Leaderboard
                         </Link>
                     </li>
@@ -59,7 +74,7 @@ const Navbar = () => {
                         <>
                             <li>
                                 <Link to="/dashboard" className="navbar-link" onClick={closeMenu}>
-                                    <LayoutDashboard size={18} style={{ display: 'inline', marginRight: '4px' }} />
+                                    <LayoutDashboard size={18} style={{ marginRight: '8px' }} />
                                     Dashboard
                                 </Link>
                             </li>
@@ -74,12 +89,12 @@ const Navbar = () => {
                                 <Link to="/profile" className="navbar-link" onClick={closeMenu}>
                                     <div className="flex items-center gap-sm">
                                         <img src={user?.avatar} alt={user?.name} className="avatar" style={{ width: '32px', height: '32px' }} />
-                                        <span className="hidden-desktop">Profile</span>
+                                        <span className="hidden-desktop" style={{ marginLeft: '8px' }}>Profile</span>
                                     </div>
                                 </Link>
                             </li>
                             <li>
-                                <button onClick={handleLogout} className="btn btn-secondary btn-sm btn-full-mobile">
+                                <button onClick={handleLogout} className="btn btn-secondary btn-sm" style={{ width: '100%' }}>
                                     <LogOut size={16} />
                                     Logout
                                 </button>
@@ -88,26 +103,17 @@ const Navbar = () => {
                     ) : (
                         <>
                             <li>
-                                <Link to="/login" className="btn btn-secondary btn-sm btn-full-mobile" onClick={closeMenu}>
+                                <Link to="/login" className="btn btn-secondary btn-sm" onClick={closeMenu} style={{ width: '100%' }}>
                                     Login
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/signup" className="btn btn-primary btn-sm btn-full-mobile" onClick={closeMenu}>
+                                <Link to="/signup" className="btn btn-primary btn-sm" onClick={closeMenu} style={{ width: '100%' }}>
                                     Sign Up
                                 </Link>
                             </li>
                         </>
                     )}
-
-                    <li>
-                        <button onClick={() => { toggleTheme(); closeMenu(); }} className="theme-toggle">
-                            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-                            <span className="hidden-desktop">
-                                {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-                            </span>
-                        </button>
-                    </li>
                 </ul>
             </div>
         </nav>

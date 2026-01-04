@@ -86,7 +86,7 @@ const SkillDetail = () => {
         <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
             {/* Skill Header */}
             <div className="card mb-xl">
-                <div className="grid grid-2 card-grid-mobile" style={{ alignItems: 'center' }}>
+                <div className="grid grid-2" style={{ alignItems: 'center' }}>
                     <div>
                         <div className="skill-icon" style={{ fontSize: '4rem', marginBottom: 'var(--spacing-md)' }}>
                             {skill.icon}

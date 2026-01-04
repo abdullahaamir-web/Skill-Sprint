@@ -33,7 +33,9 @@ const Home = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="hero">
+            <section className="hero py-fluid">
+                <div className="hero-grid-overlay"></div>
+                <div className="hero-glow"></div>
                 <div className="container hero-content">
                     <h1 className="animate-fade-in">Learn Skills Through Challenges</h1>
                     <p className="animate-fade-in">
@@ -41,8 +43,7 @@ const Home = () => {
                     </p>
                     <Link
                         to={isAuthenticated ? "/explore" : "/signup"}
-                        className="btn btn-lg"
-                        style={{ background: 'white', color: '#6366f1' }}
+                        className="btn btn-lg btn-hero"
                     >
                         {isAuthenticated ? "Explore Skills" : "Start Your First Challenge"}
                         <ArrowRight />
@@ -51,19 +52,19 @@ const Home = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="container mt-negative-mobile" style={{ marginTop: '-3rem', position: 'relative', zIndex: 10 }}>
+            <section className="container py-fluid" style={{ position: 'relative', zIndex: 10, marginTop: '2rem' }}>
                 <div className="grid grid-3">
-                    <div className="card stat-card">
+                    <div className="card stat-card" style={{ boxShadow: 'var(--shadow-xl)' }}>
                         <Users size={40} style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-md)' }} />
                         <div className="stat-value">{stats.totalUsers}+</div>
                         <div className="stat-label">Active Learners</div>
                     </div>
-                    <div className="card stat-card">
+                    <div className="card stat-card" style={{ boxShadow: 'var(--shadow-xl)' }}>
                         <Target size={40} style={{ color: 'var(--secondary)', marginBottom: 'var(--spacing-md)' }} />
                         <div className="stat-value">{stats.totalSkills}</div>
                         <div className="stat-label">Skills Available</div>
                     </div>
-                    <div className="card stat-card">
+                    <div className="card stat-card" style={{ boxShadow: 'var(--shadow-xl)' }}>
                         <Zap size={40} style={{ color: 'var(--accent)', marginBottom: 'var(--spacing-md)' }} />
                         <div className="stat-value">{stats.totalChallenges}+</div>
                         <div className="stat-label">Challenges Completed</div>
@@ -72,7 +73,7 @@ const Home = () => {
             </section>
 
             {/* Featured Skills */}
-            <section className="container mt-2xl">
+            <section className="container py-fluid">
                 <div className="text-center mb-xl">
                     <h2>Featured Skills</h2>
                     <p>Start learning with our most popular skills</p>
@@ -100,7 +101,7 @@ const Home = () => {
             </section>
 
             {/* How It Works */}
-            <section className="container mt-2xl">
+            <section className="container py-fluid">
                 <div className="text-center mb-xl">
                     <h2>How It Works</h2>
                     <p>Your journey to mastery in three simple steps</p>
@@ -125,7 +126,7 @@ const Home = () => {
             </section>
 
             {/* Top Users */}
-            <section className="container mt-2xl mb-2xl">
+            <section className="container py-fluid">
                 <div className="text-center mb-xl">
                     <h2>Top Learners This Week</h2>
                     <p>Join our community of dedicated learners</p>
@@ -158,7 +159,7 @@ const Home = () => {
 
             {/* CTA Section */}
             {!isAuthenticated && (
-                <section style={{ background: 'var(--gradient-primary)', padding: '4rem 0', color: 'white' }}>
+                <section className="py-fluid" style={{ background: 'var(--gradient-primary)', color: 'white' }}>
                     <div className="container text-center">
                         <h2>Ready to Start Learning?</h2>
                         <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 'var(--spacing-xl)' }}>

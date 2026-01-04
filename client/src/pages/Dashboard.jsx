@@ -66,14 +66,14 @@ const Dashboard = () => {
     });
 
     return (
-        <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
+        <div className="container py-fluid">
             <div className="mb-xl">
                 <h1>Welcome back, {user?.name}! 👋</h1>
                 <p>Here's your learning progress</p>
             </div>
 
             {/* Stats Overview */}
-            <div className="grid grid-4 card-grid-mobile mb-xl">
+            <div className="grid grid-4 mb-xl">
                 <div className="card stat-card">
                     <Target size={32} style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-md)' }} />
                     <div className="stat-value">{totalChallengesCompleted}</div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="grid grid-2 card-grid-mobile mb-xl">
+            <div className="grid grid-2 mb-xl">
                 {/* Active Skills */}
                 <div className="card">
                     <h3 className="mb-lg">Active Skills</h3>

@@ -26,6 +26,7 @@ const CHALLENGES_DB = path.join(DB_DIR, 'challenges.json');
 const SUBMISSIONS_DB = path.join(DB_DIR, 'submissions.json');
 const PROGRESS_DB = path.join(DB_DIR, 'progress.json');
 const BADGES_DB = path.join(DB_DIR, 'badges.json');
+const SUBSCRIPTIONS_DB = path.join(DB_DIR, 'subscriptions.json');
 
 // Initialize database
 async function initDatabase() {
@@ -37,19 +38,18 @@ async function initDatabase() {
     try {
       await fs.access(USERS_DB);
     } catch {
-      const adminPassword = await bcrypt.hash('admin123', 10);
       const userPassword = await bcrypt.hash('user123', 10);
 
       const users = [
         {
           id: '1',
-          email: 'admin@skillsprint.com',
-          password: adminPassword,
-          name: 'Admin User',
+          email: 'noorshah@example.com',
+          password: "$2a$10$znJyGTBAu1IP/O4wIgnzT.4i5U5ZosWF8YKyHjuSK/vN2LMGnSYIG",
+          name: 'Syed Noor Ul Hassan',
           role: 'admin',
-          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Admin',
+          avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Noorshah',
           bio: 'Platform Administrator',
-          createdAt: new Date().toISOString(),
+          createdAt: "2026-01-03T20:21:10.351Z",
           streak: 0,
           points: 0
         },
@@ -198,6 +198,11 @@ async function initDatabase() {
         { id: '6', name: 'Top Performer', description: 'Reach top 10 on leaderboard', icon: '👑', requirement: 'top_10_leaderboard' }
       ];
       await fs.writeFile(BADGES_DB, JSON.stringify(badges, null, 2));
+    }
+
+    // Initialize subscriptions
+    if (!await fileExists(SUBSCRIPTIONS_DB)) {
+      await fs.writeFile(SUBSCRIPTIONS_DB, JSON.stringify([], null, 2));
     }
 
     console.log('✅ Database initialized successfully');
@@ -704,6 +709,32 @@ app.get('/api/stats', async (req, res) => {
     res.json(stats);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch stats' });
+  }
+});
+
+// ============ NEWSLETTER ROUTES ============
+
+app.post('/api/newsletter/subscribe', async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email || !email.includes('@')) {
+      return res.status(400).json({ error: 'Invalid email address' });
+    }
+
+    const subscriptions = await readDB(SUBSCRIPTIONS_DB);
+    if (subscriptions.find(s => s.email === email)) {
+      return res.status(400).json({ error: 'Email already subscribed' });
+    }
+
+    subscriptions.push({
+      email,
+      subscribedAt: new Date().toISOString()
+    });
+
+    await writeDB(SUBSCRIPTIONS_DB, subscriptions);
+    res.json({ message: 'Subscribed successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'Subscription failed' });
   }
 });
 

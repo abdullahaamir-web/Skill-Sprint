@@ -47,7 +47,7 @@ const Leaderboard = () => {
     }
 
     return (
-        <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
+        <div className="container py-fluid">
             <div className="text-center mb-xl">
                 <h1>
                     <Trophy size={40} style={{ display: 'inline', marginRight: '12px', color: 'var(--warning)' }} />
@@ -58,24 +58,24 @@ const Leaderboard = () => {
 
             {/* Filter Tabs */}
             <div className="card mb-xl">
-                <div className="flex gap-md">
+                <div className="flex gap-md" style={{ flexWrap: 'wrap' }}>
                     <button
                         onClick={() => setFilter('points')}
-                        className={`btn ${filter === 'points' ? 'btn-primary' : 'btn-secondary'}`}
+                        className={`btn ${filter === 'points' ? 'btn-primary' : 'btn-secondary'} btn-sm`}
                     >
                         <Trophy size={18} />
                         Points
                     </button>
                     <button
                         onClick={() => setFilter('streak')}
-                        className={`btn ${filter === 'streak' ? 'btn-primary' : 'btn-secondary'}`}
+                        className={`btn ${filter === 'streak' ? 'btn-primary' : 'btn-secondary'} btn-sm`}
                     >
                         <Flame size={18} />
                         Streak
                     </button>
                     <button
                         onClick={() => setFilter('challenges')}
-                        className={`btn ${filter === 'challenges' ? 'btn-primary' : 'btn-secondary'}`}
+                        className={`btn ${filter === 'challenges' ? 'btn-primary' : 'btn-secondary'} btn-sm`}
                     >
                         <Target size={18} />
                         Challenges
@@ -111,7 +111,7 @@ const Leaderboard = () => {
                                     <div className="flex items-center justify-between gap-md" style={{ flexWrap: 'wrap' }}>
                                         <div className="flex items-center gap-md" style={{ flexWrap: 'wrap' }}>
                                             <div style={{
-                                                fontSize: '1.25rem',
+                                                fontSize: 'clamp(1rem, 4vw, 1.5rem)',
                                                 fontWeight: 'bold',
                                                 minWidth: '30px',
                                                 textAlign: 'center'
@@ -123,34 +123,34 @@ const Leaderboard = () => {
                                                 alt={entry.name}
                                                 className="avatar"
                                                 style={{
-                                                    width: '48px',
-                                                    height: '48px',
+                                                    width: 'clamp(40px, 10vw, 60px)',
+                                                    height: 'clamp(40px, 10vw, 60px)',
                                                     border: isCurrentUser ? '2px solid white' : '1px solid var(--border)'
                                                 }}
                                             />
-                                            <div style={{ flex: 1, minWidth: '150px' }}>
-                                                <h4 style={{ color: isCurrentUser ? 'white' : 'var(--text-primary)', marginBottom: 'var(--spacing-xs)' }}>
+                                            <div style={{ flex: '1', minWidth: '150px' }}>
+                                                <h4 style={{ color: isCurrentUser ? 'white' : 'var(--text-primary)', fontSize: 'clamp(0.9rem, 3vw, 1.1rem)' }}>
                                                     {entry.name}
                                                     {isCurrentUser && ' (You)'}
                                                 </h4>
-                                                <div className="flex gap-md mt-xs" style={{ flexWrap: 'wrap', rowGap: 'var(--spacing-xs)' }}>
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
-                                                        <Trophy size={12} style={{ marginRight: '4px' }} />
+                                                <div className="flex gap-md mt-xs" style={{ flexWrap: 'wrap' }}>
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                                        <Trophy size={12} />
                                                         {entry.points} pts
                                                     </span>
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
-                                                        <Flame size={12} style={{ marginRight: '4px' }} />
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                                        <Flame size={12} />
                                                         {entry.streak}d
                                                     </span>
-                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center' }}>
-                                                        <Target size={12} style={{ marginRight: '4px' }} />
-                                                        {entry.challengesCompleted} challenges
+                                                    <span className={isCurrentUser ? '' : 'text-secondary'} style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                                        <Target size={12} />
+                                                        {entry.challengesCompleted} ch
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                         {rank <= 3 && (
-                                            <Medal size={24} style={{ color: isCurrentUser ? 'white' : 'var(--warning)', flexShrink: 0 }} />
+                                            <Medal size={28} style={{ color: isCurrentUser ? 'white' : 'var(--warning)', flexShrink: 0 }} />
                                         )}
                                     </div>
                                 </div>

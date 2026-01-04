@@ -64,7 +64,7 @@ const Explore = () => {
 
             {/* Filters */}
             <div className="card mb-xl">
-                <div className="grid grid-2 card-grid-mobile">
+                <div className="grid grid-2">
                     <div className="form-group" style={{ marginBottom: 0 }}>
                         <div style={{ position: 'relative' }}>
                             <Search size={20} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-tertiary)' }} />

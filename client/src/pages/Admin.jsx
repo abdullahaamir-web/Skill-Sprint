@@ -302,7 +302,7 @@ const Admin = () => {
                         </div>
                     )}
 
-                    <div className="grid grid-2 card-grid-mobile">
+                    <div className="grid grid-2">
                         {skills.map(skill => (
                             <div key={skill.id} className="card">
                                 <div className="flex items-start gap-md">
