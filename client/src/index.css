@@ -418,8 +418,8 @@ a:hover {
   }
 
   .container {
-    padding: 0 2rem;
-    /* Significantly tighter mobile spacing */
+    padding: 0 3rem;
+    /* Maximum constraint for XS screens */
   }
 
   /* Center alignment for mobile cards */
